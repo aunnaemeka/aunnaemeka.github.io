@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-03T06:31:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">aunnaemeka</title><subtitle>A believer of The Lord Jesus Christ.</subtitle><entry><title type="html">Create a Personal Website</title><link href="http://localhost:4000/2021/04/23/create-a-personal-website.html" rel="alternate" type="text/html" title="Create a Personal Website" /><published>2021-04-23T00:00:00+01:00</published><updated>2021-04-23T00:00:00+01:00</updated><id>http://localhost:4000/2021/04/23/create-a-personal-website</id><content type="html" xml:base="http://localhost:4000/2021/04/23/create-a-personal-website.html">&lt;p&gt;My High Level Plan: Host a personal website on a custom domain using GitHub pages&lt;/p&gt;
+
+&lt;h3 id=&quot;issue-1-which-static-site-generator-should-i-use&quot;&gt;Issue 1: Which static site generator should I use?&lt;/h3&gt;
+&lt;p&gt;Solution: My options were Statiq, Jekyll, Gatsby. Having good expertise with .NET, I desired to use Statiq. The Lord had told me by The Holy Spirit to use Jekyll. He reminded me of how He gave me desire much earlier to learn the fundamentals of programming, and while I learnt this with C#. The Lord says this is an opportunity to be well versed in stewarding an ICT firm through exercising these skills in unique projects. Jekyll it is.&lt;/p&gt;
+
+&lt;h2 id=&quot;task-1-setup-github-pages&quot;&gt;Task 1: Setup Github pages&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create GitHub pages repository
+    &lt;ul&gt;
+      &lt;li&gt;Click new&lt;/li&gt;
+      &lt;li&gt;username.github.io&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clone locally&lt;/li&gt;
+  &lt;li&gt;git clone repoLink.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;issue-2-whats-the-difference-between-git-clone-and-git-remote-add-httpsgit-repo-url&quot;&gt;Issue 2: Whats the difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git remote add https://git-repo-url&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Solution: I see that when working with a hosted repo, it is advisable to clone it rather than create a local repo + add as a remote the hosted repo because cloning is a thorough operation ie it already handles several functionality I need but may not remember to enforce. For more details see &lt;a href=&quot;https://stackoverflow.com/questions/4108778/what-is-the-difference-between-clone-and-mkdir-cd-init-remote-add-pull&quot;&gt;Difference between git clone and git remote add&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note: This is not a tutorial, but my journey towards fulfilling a purpose. You should not directly implement these instructions, but should rather skim through the material, as you implement the official docs.&lt;/p&gt;
+
+&lt;p&gt;This is useful if you face similar issues, as a guideline, to show you what to watch out for.&lt;/p&gt;
+
+&lt;h2 id=&quot;task-2-install-jekyll&quot;&gt;Task 2: Install Jekyll&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Homebrew&lt;/p&gt;
+
+    &lt;p&gt;We will be using the jekyll official docs as the main resource alongside others&lt;/p&gt;
+
+    &lt;p&gt;To run commands, we will be using the Terminal application. You can find this in Launchpad &amp;gt; Other. I encourage you to add it to your Dock.&lt;/p&gt;
+
+    &lt;p&gt;You should navigate to the cloned repository&lt;/p&gt;
+
+    &lt;p&gt;I already have home-brew installed. You can install it (for macOS) in your terminal, using this command&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install ruby&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tip: It is advisable to use a package manager instead of brew to install ruby, so please skip this step and use rbenv&lt;/p&gt;
+
+&lt;p&gt;You can install ruby using homebrew using this command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;issue-3-error-ruby-no-bottle-available-you-can-try-to-install-from-source-with-brew-install-build-from-source-ruby&quot;&gt;Issue 3: Error: ruby: no bottle available! You can try to install from source with: brew install —build-from-source ruby&lt;/h2&gt;
+
+&lt;p&gt;Solution: Use rbenv&lt;/p&gt;
+
+&lt;p&gt;Install rbenv and ruby-build using this command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install rbenv ruby-build 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Info: rbenv allows me run multiple versions of ruby, ruby-build is a plugin&lt;/p&gt;
+
+&lt;p&gt;My systems battery ran down. I heard in my spirit, that there would be light. And ta-da! It is here! Back to work.&lt;/p&gt;
+
+&lt;p&gt;Integrate rbenv with your shell(bash), add this to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &apos;if which rbenv &amp;gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi&apos; &amp;gt;&amp;gt; ~/.bash_profile 
+source ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Info: Forces the .bash_profile to execute. This loads the values immediately without having to reboot.&lt;/p&gt;
+
+&lt;p&gt;Check rbenv installation&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install required ruby version. I installed version 3.0.0&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv install 3.0.0 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Set installed ruby as global for rbenv&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv global 3.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Check ruby version&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby -v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install Jekyll and bundler gems by running the following command in your terminal&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install --user-install bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;issue-4-warning--you-dont-have-usersmymaclocalsharegemruby300bin-in-your-path-gem-executables-will-not-run&quot;&gt;Issue 4: WARNING:  You don’t have /Users/mymac/.local/share/gem/ruby/3.0.0/bin in your PATH, gem executables will not run.&lt;/h3&gt;
+
+&lt;p&gt;Solution: Add to path by&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export PATH=“~/.local/share/gem/ruby/3.0.0/bin:$PATH&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Solution: rbenv was not initialised yet.&lt;/p&gt;
+
+&lt;p&gt;Install Jekyll and bundler gems&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install --user-install bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SUCCESS!&lt;/p&gt;
+
+&lt;p&gt;Create new Jekyll site which overwrites the existing(in this case empty) repo&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll new . --force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;issue-5-could-not-locate-gemfile-or-bundle-directory&quot;&gt;Issue 5: Could not locate Gemfile or .bundle/ directory&lt;/h3&gt;
+
+&lt;p&gt;Solution: View current gh-pages jekyll versions here https://pages.github.com/versions/, as at the time of writing, it is 3.9.0 and run&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll 3.9.0 new .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;issue-6-fatal-jekyll-390-could-not-be-found-you-may-need-to-install-the-jekyll-390-gem-or-a-related-gem-to-be-able-to-use-this-subcommand&quot;&gt;Issue 6: fatal: ‘jekyll 3.9.0’ could not be found. You may need to install the jekyll-3.9.0 gem or a related gem to be able to use this subcommand.&lt;/h3&gt;
+
+&lt;p&gt;Solution: I searched for how to install a particular jekyll version. This is the command I saw. Run this command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll -v 3.9.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem list jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Shows the list of jekyll installed which in this case are two. The first one being the most recent jekyll version installed with the first command, and the second one been the Github pages supported jekyll version installed via the above command&lt;/p&gt;
+
+&lt;p&gt;Run&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll 3.9.0 new .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;issue-6--fatal-jekyll-390-could-not-be-found-you-may-need-to-install-the-jekyll-390-gem-or-a-related-gem-to-be-able-to-use-this-subcommand&quot;&gt;Issue 6:  fatal: ‘jekyll 3.9.0’ could not be found. You may need to install the jekyll-3.9.0 gem or a related gem to be able to use this subcommand.&lt;/h3&gt;
+
+&lt;p&gt;Solution: running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;returned&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Users/mymac/.local/share/gem/ruby/3.0.0/bin/jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This means that the changes to the PATH variable had not reflected yet on the system, as it is meant to use the jekyll installed by rbenv. So run&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which jekyll 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;now shows&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Users/mymac/.rbenv/shims/jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Rerun the command to install new jekyll site in current directory&lt;/p&gt;
+
+&lt;p&gt;Emptied my bash_profile by this command which opened it in textedit&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch ~/.bash_profile; open ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Contents I removed&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if which rbenv &amp;gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi
+export PATH=&quot;$HOME/.gem/ruby/3.0.0/bin:$PATH&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;returns&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;usr/bin/ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;returns&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;usr/bin/gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Solution: I have to append the following to the bash_profile&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;eval &quot;$(rbenv init -)&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I run this&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch ~/.bash_profile; open ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which opens my bash_profile, and I append the command to integrate rbenv with the shell&lt;/p&gt;
+
+&lt;p&gt;SUCCESS!&lt;/p&gt;
+
+&lt;p&gt;Now running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;returns&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/User/mymac/.rbenv/shims/ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;returns&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/User/mymac/.rbenv/shims/gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll 3.9.0 new .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Still fails&lt;/p&gt;
+
+&lt;p&gt;Solution: append an underscore character before and after the version number ie&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll _3.9.0_ new .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SUCCESS!&lt;/p&gt;
+
+&lt;p&gt;Running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle info jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Shows the installed jekyll&lt;/p&gt;
+
+&lt;p&gt;Info: It is important to either restart the terminal when edits are made to bash_profile or to force changes to it to reflect by running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;task-3-setup-local-jekyll-site-for-github-pages&quot;&gt;Task 3: Setup local jekyll site for GitHub pages&lt;/h2&gt;
+&lt;p&gt;Open the jekyll directory in your favourite code editor, enter into the Gemfile&lt;/p&gt;
+
+&lt;p&gt;comment the jekyll gem&lt;/p&gt;
+
+&lt;p&gt;uncomment the ghpages gem, and add the github-pages dependency version, which in my case is 212.&lt;/p&gt;
+
+&lt;p&gt;You can check the current dependency version at https://pages.github.com/versions/&lt;/p&gt;
+
+&lt;p&gt;In Terminal, run&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Running the following command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve --livereload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;issue-7-require-cannot-load-such-file--webrick-loaderror&quot;&gt;Issue 7: require’: cannot load such file – webrick (LoadError)&lt;/h3&gt;
+
+&lt;p&gt;Solution: run the following command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle add webrick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now running&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve --livereload 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;WORKS!&lt;/p&gt;
+
+&lt;p&gt;Now you need to, push your changes to your remote repo&lt;/p&gt;
+
+&lt;p&gt;If you cloned the existing repo, run this in your terminal&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you initialized an empty repo locally, run this&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin https://github.com/USER/REPOSITORY.git
+git push -u origin BRANCH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;BRANCH indicates the branch you want to push. -u sets the upstream&lt;/p&gt;
+
+&lt;h3 id=&quot;issue-8-i-signed-commits-with-a-wrong-username-and-email&quot;&gt;Issue 8: I signed commits with a wrong username and email&lt;/h3&gt;
+
+&lt;p&gt;I noticed I was signed into a different GitHub account, I want to change the git username and email for the logs into my github username and noreply email&lt;/p&gt;
+
+&lt;p&gt;In my case, I wanted to change these details to the root(initial) commit&lt;/p&gt;
+
+&lt;p&gt;Solution: found a solution on stackoverflow via interactive rebase &lt;a href=&quot;https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit&quot;&gt;Change commit author&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;task-4-create-a-first-post&quot;&gt;Task 4: Create a first post&lt;/h2&gt;
+
+&lt;p&gt;To create a blog post. I have to be familiar with markdown.
+Markdown resource: &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By default, you are on the “Main” tab, I encourage reading the “Introduction” section. You might go ahead and skim through.
+Then go to the “Basic” tab&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-creating-the-personal-website-involves-the-following&quot;&gt;Summary: creating the personal website involves the following&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creating a git repository on Github using your Github username&lt;/li&gt;
+  &lt;li&gt;Installing Jekyll (brew, ruby, rbenv, jekyll gem, bundler gem, webrick gem)&lt;/li&gt;
+  &lt;li&gt;Cloning the new Jekyll project to the created git repository&lt;/li&gt;
+  &lt;li&gt;Creating a post using Markdown&lt;/li&gt;
+  &lt;li&gt;Connecting the domain name records of your custom domain to your Github repository&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;learnings&quot;&gt;Learnings:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Changing the bash profile&lt;/li&gt;
+  &lt;li&gt;Git interactive rebase&lt;/li&gt;
+  &lt;li&gt;Verifying package installations&lt;/li&gt;
+  &lt;li&gt;Markdown atx-style header, paragraphs, ordered &amp;amp; unordered lists, indented lists, line breaks, code block, inline code, inline link&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;further-steps&quot;&gt;Further steps:&lt;/h2&gt;
+&lt;p&gt;In a new journey, I will add several important functionality via jekyll plugins and design a theme for this website&lt;/p&gt;</content><author><name></name></author><summary type="html">My High Level Plan: Host a personal website on a custom domain using GitHub pages</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2021/02/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-02-19T09:23:38+01:00</published><updated>2021-02-19T09:23:38+01:00</updated><id>http://localhost:4000/jekyll/update/2021/02/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2021/02/19/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
