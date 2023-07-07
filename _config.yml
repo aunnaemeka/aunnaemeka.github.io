@@ -40,7 +40,7 @@ collections:
     permalink: /:name
   posts:
     output: true
-    permalink: /blog/:categories/:title
+    permalink: /blog/:categories/:title/
   
 defaults:
   -
