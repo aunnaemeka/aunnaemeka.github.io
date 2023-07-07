@@ -3,26 +3,11 @@ layout: page
 title: About
 ---
 
-Sidey is a simple and minimalistic jekyll blogging theme.
+Multi-disciplinary product developer. Designs strategy and solutions via detailed analysis, archetypes, and lean principles. 
 
-### Features
+### Now
+Revisioning businesses at <a href="https://carveton.com" target="_blank">Carveton</a>  
+Writing personally relevant stuff at [aunnaemeka.com](https://aunnaemeka.com  "Home")
 
-- Responsive design
-- Inline CSS
-- Anchor headings
-- Search
-- Tags & tag pages
-- Security headers (for Netlify hosting)
-- 404 page
-- Compressed CSS and HTML
-- 100/100 score on Lighthouse, Page Speed Insights & Webpagetest
-- Robots.txt
-- Atom & Json feeds
-- Sass
-- Seo optimized (Twitter cards, Facebook Open Graph, Schema.org)
-- Ultra fast (Only ~5kb of CSS)
-- Sidebar navigation
-
-### Screenshot
-
-![Screenshot](screenshot.png)
+### Contact
+You can reach me on Twitter: <a href="https://twitter.com/aunnaemeka" target="_blank">@aunnaemeka</a> or via mail: [aunnaemeka@gmail.com](mailto:aunnaemeka@gmail.com)

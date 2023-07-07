@@ -1,17 +1,17 @@
-site: Sidey
-url: #yoururl
-title: Sidey
-description: Simple and minimalistic jekyll blogging theme.
+site: aunnaemeka
+url: https://aunnaemeka.com
+title: aunnaemeka
+description: Intentional outcomes
 twitter:
-  username: #yourusername
-  card: summary
-  creator: #yourusername
+  username: aunnaemeka
+  card: Intentional outcomes
+  creator: aunnaemeka
 author:
-  twitter: #yourusername
-  name: #yourusername
+  twitter: aunnaemeka
+  name: aunnaemeka
   avatar:
-  email: #youremail
-  url: #yoururl
+  email: aunnaemeka@gmail.com
+  url: https://aunnaemeka.com
 permalink: pretty
 
 baseurl: ""
@@ -40,7 +40,7 @@ collections:
     permalink: /:name
   posts:
     output: true
-    permalink: /:year/:month/:day/:slug
+    permalink: /blog/:categories/:title
   
 defaults:
   -
@@ -60,3 +60,5 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+include: [".well-known"]

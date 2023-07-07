@@ -1,6 +1,6 @@
 *,:after,:before {
 	box-sizing:border-box;
-	background-color:inherit;
+	background-color: #f3f3f3;
 	color:inherit;
 	margin:0;
 	padding:0;
@@ -16,7 +16,7 @@ body {
 }
 
 nav ul {
-    border-right: 1px solid #edf2f7;
+    border-right: 1px solid #d3d6Da;
 }
 
 a {
@@ -68,9 +68,10 @@ img {
 }
 
 hr {
-	background: #000;
+	background: #d3d6Da;
     height: 1px;
     border: 0;
+	margin: 0.5rem 0;
 }
 
 header {
@@ -157,12 +158,20 @@ strong, b {
 	//list-style-position: inside;
 }
 
+.post time{
+	color: #888;
+}
+
 main {
 	display:flex;
 	flex-wrap:wrap;
 	max-width:60rem;
 	margin:2rem auto;
 	padding:1rem;
+}
+
+.footnotes {
+	font-size: 0.75rem;
 }
 
 
@@ -175,7 +184,7 @@ header li {
 	padding-bottom: 1rem;
 }
 header ul {
-	border-bottom: 1px solid #edf2f7;
+	border-bottom: 1px solid #d3d6Da;
 	padding-bottom: 2rem;	
 }
 nav ul {

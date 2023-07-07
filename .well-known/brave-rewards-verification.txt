@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: aunnaemeka.com
+Token: 2b0d0a326a7f068dc7ab5cca7ea769d1ca863ff64ebf4c9660adc695893d8ce1
